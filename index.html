@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Square Media Carousel</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background: #111;
+    }
+    .carousel-container {
+      position: relative;
+      width: 80vmin;
+      height: 80vmin;
+      overflow: hidden;
+      border-radius: 12px;
+      background: #000;
+    }
+    .carousel {
+      display: flex;
+      height: 100%;
+      animation: scroll 30s linear infinite;
+    }
+    .slide {
+      flex: 0 0 auto;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #000;
+      margin: 0;
+    }
+    .slide img,
+    .slide iframe,
+    .slide blockquote,
+    .slide .twitter-tweet {
+      max-height: 100%;
+      max-width: 100%;
+      object-fit: contain;
+      border: none;
+    }
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .carousel-track {
+      display: flex;
+      flex-wrap: nowrap;
+      width: max-content;
+    }
+  </style>
+</head>
+<body>
+  <div class="carousel-container">
+    <div class="carousel carousel-track">
+      <div class="slide">
+        <img src="https://picsum.photos/400/800?random=1" alt="Slide 1">
+      </div>
+      <div class="slide">
+        <img src="https://picsum.photos/400/800?random=2" alt="Slide 2">
+      </div>
+      <div class="slide">
+        <img src="https://picsum.photos/400/800?random=3" alt="Slide 3">
+      </div>
+      <div class="slide">
+        <img src="https://picsum.photos/400/800?random=1" alt="Slide 1 Duplicate">
+      </div>
+      <div class="slide">
+        <img src="https://picsum.photos/400/800?random=2" alt="Slide 2 Duplicate">
+      </div>
+      <div class="slide">
+        <img src="https://picsum.photos/400/800?random=3" alt="Slide 3 Duplicate">
+      </div>
+    </div>
+  </div>
+</body>
+</html>
